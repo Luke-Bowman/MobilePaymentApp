@@ -31,11 +31,13 @@ public class App {
         // Define payment information fields here (e.g., credit card number, expiration date).
         private String creditCardNumber;
         private String expirationDate;
+        private Integer securityNum;
         
         // Constructor for PaymentInfo
-        public PaymentInfo(String creditCardNumber, String expirationDate) {
+        public PaymentInfo(String creditCardNumber, String expirationDate, Integer securityNum) {
             this.creditCardNumber = creditCardNumber;
             this.expirationDate = expirationDate;
+            this.securityNum = securityNum;
         }  
         // Getters and setters for PaymentInfo fields
 
@@ -50,6 +52,12 @@ public class App {
         }
         public void setExpirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
+        }
+        public Integer getSecurityNum(){
+            return securityNum;
+        }
+        public void setSecurityNum(Integer securityNum){
+            this.securityNum = securityNum;
         }
 
     }
@@ -73,6 +81,5 @@ public class App {
         }
     }
 }
-
 
 
