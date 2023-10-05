@@ -1,6 +1,7 @@
 package main;
 
-public class App {
+public class App {  // This is the main class
+
 
     /**
      * Process a payment transaction.
