@@ -1,6 +1,6 @@
 package main;
 
-public class App {  // This is the main class
+public class App {  // This is the main
 
 
     /**
