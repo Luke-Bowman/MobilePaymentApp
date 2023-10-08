@@ -1,5 +1,3 @@
-package main;
-
 import authentication.AuthLogin;
 import authentication.AuthRegister;
 import authentication.AuthService;
@@ -10,7 +8,7 @@ import payment.PaymentService;
 import transaction_history.TransactionHistory;
 import user_management.UserManager;
 
-public class App {
+public class TestHarness {
     public static void main(String[] args) {
         // Instantiate services and classes
         AuthService authService = new AuthService();
@@ -21,38 +19,36 @@ public class App {
         UserManager userManager = new UserManager();
         TransactionHistory transactionHistory = new TransactionHistory();
 
-        // Example usage of services and classes
-
-        // 1. User Registration and Login
+        // Test Variables
         String username = "user1";
         String password = "pass1";
-
-        if(authRegister.registerUser(username, password)) {
-            System.out.println("User registered successfully!");
-        }
-
-        if(authLogin.loginUser(username, password)) {
-            System.out.println("User logged in successfully!");
-        }
-
-        // 2. Payment Processing
         PaymentInfo paymentInfo = new PaymentInfo("1234567812345678", "12/23", 123);
+
+        // Test 1: User Registration
+        boolean isUserRegistered = authRegister.registerUser(username, password);
+        printTestResult("User Registration", isUserRegistered);
+
+        // Test 2: User Login
+        boolean isUserLoggedIn = authLogin.loginUser(username, password);
+        printTestResult("User Login", isUserLoggedIn);
+
+        // Test 3: Payment Processing
         String transactionId = paymentService.processPayment(1, 100.0, paymentInfo);
+        boolean isPaymentProcessed = !"Error".equals(transactionId);
+        printTestResult("Payment Processing", isPaymentProcessed);
 
-        if (!"Error".equals(transactionId)) {
-            System.out.println("Payment processed successfully! Transaction ID: " + transactionId);
-        } else {
-            System.out.println("Payment processing failed!");
-        }
-
-        // 3. Retrieve Transaction Details
+        // Test 4: Retrieve Transaction Details
         PaymentRecord record = transactionHistory.getTransactionDetails(Integer.parseInt(transactionId));
         if (record != null) {
-            System.out.println("Retrieved transaction details for ID: " + record.getPaymentID());
-        } else {
-            System.out.println("No transaction details found for ID: " + transactionId);
+            record.getPaymentID();
+            Integer.parseInt(transactionId);
         }
+        boolean isTransactionRetrieved = false;
+        printTestResult("Retrieve Transaction Details", isTransactionRetrieved);
+    }
 
-        // Additional logic and flow would go here, based on your application's requirements.
+    private static void printTestResult(String testName, boolean result) {
+        System.out.println(testName + ": " + (result ? "Passed" : "Failed"));
     }
 }
+
