@@ -6,8 +6,4 @@ public class PaymentRecord {
     public PaymentRecord(Integer transactionID) {
         this.transactionID = transactionID;
     }
-
-    public String getPaymentID() {
-        return null;
-    }
 }
