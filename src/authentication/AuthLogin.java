@@ -1,4 +1,4 @@
-package authentication;
+package src.authentication;
 
 public class AuthLogin {
     private AuthService authService;

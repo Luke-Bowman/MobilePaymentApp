@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public class App {  // This is the main
 
