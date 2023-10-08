@@ -1,6 +1,13 @@
-package main;
+package src.main;
 
-public class App {  // This is the main
+import src.authentication.AuthLogin;
+import src.authentication.AuthRegister;
+import src.authentication.AuthService;
+import src.payment.PaymentGateway;
+import src.payment.PaymentService;
+import src.transaction_history.TransactionHistory;
+import src.user_management.UserManager;
+
 
 public class App { //NEW BRanch
     public static void main(String[] args) {
@@ -12,5 +19,8 @@ public class App { //NEW BRanch
         PaymentGateway paymentGateway = new PaymentGateway();
         UserManager userManager = new UserManager();
         TransactionHistory transactionHistory = new TransactionHistory();
+    }
+}
+
 
 
