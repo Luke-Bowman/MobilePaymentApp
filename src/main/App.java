@@ -1,5 +1,7 @@
+package main;
 
-public class App {
+public class App {  // This is the main
+
 
     /**
      * Process a payment transaction.
