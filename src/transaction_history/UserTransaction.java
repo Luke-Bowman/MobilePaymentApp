@@ -1,4 +1,4 @@
-package transaction_history;
+package src.transaction_history;
 
 public class UserTransaction {
     private Integer transactionID;

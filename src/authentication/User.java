@@ -1,4 +1,4 @@
-package authentication;
+package src.authentication;
 
 public class User {
     private String username;

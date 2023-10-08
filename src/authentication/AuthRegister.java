@@ -1,4 +1,4 @@
-package authentication;
+package src.authentication;
 
 public class AuthRegister {
     public boolean registerUser(String username, String password) {

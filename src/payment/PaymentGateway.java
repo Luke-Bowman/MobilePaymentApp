@@ -1,4 +1,4 @@
-package payment;
+package src.payment;
 
 public class PaymentGateway {
     public boolean makePayment(PaymentInfo paymentInfo, double amount) {

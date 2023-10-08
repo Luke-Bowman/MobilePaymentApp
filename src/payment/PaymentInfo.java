@@ -5,10 +5,6 @@ public class PaymentInfo {
     private String expirationDate;
     private Integer securityNum;
 
-    public PaymentInfo(String s, String s1, int i) {
-
-    }
-
     // Constructor, getters, and setters...
 }
 
