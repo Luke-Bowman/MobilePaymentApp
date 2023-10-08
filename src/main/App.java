@@ -10,7 +10,7 @@ import payment.PaymentService;
 import transaction_history.TransactionHistory;
 import user_management.UserManager;
 
-public class App {
+public class App { //changed main class to this now
     public static void main(String[] args) {
         // Instantiate services and classes
         AuthService authService = new AuthService();
