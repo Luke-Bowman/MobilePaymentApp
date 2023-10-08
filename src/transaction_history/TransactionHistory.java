@@ -1,6 +1,6 @@
-package transaction_history;
+package src.transaction_history;
 
-import payment.PaymentRecord;
+import src.payment.PaymentRecord;
 
 public class TransactionHistory {
     public PaymentRecord getTransactionDetails(Integer transactionId) {

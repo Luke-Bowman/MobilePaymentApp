@@ -1,4 +1,4 @@
-package authentication;
+package src.authentication;
 
 public class AuthService {
     public boolean validateCredentials(String username, String password) {

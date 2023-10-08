@@ -1,4 +1,4 @@
-package payment;
+package src.payment;
 
 public class PaymentService {
     public String processPayment(int userId, double amount, PaymentInfo paymentInfo) {

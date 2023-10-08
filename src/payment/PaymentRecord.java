@@ -1,4 +1,4 @@
-package payment;
+package src.payment;
 
 public class PaymentRecord {
     private Integer transactionID;
